@@ -1,21 +1,53 @@
+import { Search } from "lucide-react";
 import { DestinationSearch } from "../components/destination-search";
 import { getDictionary, t } from "../lib/i18n";
 
+// Airbnb homepage anatomy: quiet 28px/700 hero, the pill bar (white, fully
+// rounded, hairline segments, circular Rausch orb) then a dense photo grid.
 export default function Home() {
   const dict = getDictionary("fr");
   return (
-    <main className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-4 py-12 text-center sm:py-20">
-      <h1 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
-        {t(dict, "home.heroTitle")}
-      </h1>
-      <p className="max-w-xl text-muted-foreground">{t(dict, "home.heroSubtitle")}</p>
-      <div id="destinations" className="w-full max-w-xl">
-        <p className="mb-3 text-sm text-muted-foreground">{t(dict, "home.searchPlaceholder")}</p>
-        <DestinationSearch />
-      </div>
-      <section id="aide" className="w-full max-w-xl rounded-2xl border bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold">{t(dict, "support.whatsappCta")}</h2>
-        <p className="mt-2 text-sm text-muted-foreground">{t(dict, "support.hubBlurb")}</p>
+    <main className="pb-16">
+      <section className="mx-auto max-w-5xl px-4 pt-12 text-center sm:pt-16">
+        <h1 className="mx-auto max-w-2xl text-[28px] font-bold leading-snug tracking-tight text-foreground sm:text-[30px]">
+          {t(dict, "home.heroTitle")}
+        </h1>
+        <p className="mx-auto mt-3 max-w-xl text-muted-foreground">{t(dict, "home.heroSubtitle")}</p>
+      </section>
+
+      <section aria-label={t(dict, "nav.destinations")} className="mx-auto max-w-5xl px-4 sm:px-6">
+        <a
+          href="#destinations"
+          className="mx-auto mt-8 flex h-16 w-full max-w-xl items-center rounded-full border border-border bg-white pr-2 pl-8 text-left shadow-airbnb transition-shadow"
+        >
+          <span className="flex min-w-0 flex-col">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-foreground">
+              {t(dict, "home.searchLabel")}
+            </span>
+            <span className="truncate text-sm text-muted-foreground">
+              {t(dict, "home.searchPlaceholder")}
+            </span>
+          </span>
+          <span
+            aria-hidden="true"
+            className="ml-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors hover:bg-[#e00b41]"
+          >
+            <Search className="h-5 w-5" strokeWidth={2.5} />
+          </span>
+        </a>
+
+        <div id="destinations" className="mt-10 scroll-mt-24">
+          <h2 className="sr-only">{t(dict, "nav.destinations")}</h2>
+          <DestinationSearch />
+        </div>
+      </section>
+
+      <section
+        id="aide"
+        className="mx-auto mt-16 max-w-5xl scroll-mt-24 rounded-xl border border-border bg-white px-6 py-8 sm:px-8"
+      >
+        <h2 className="text-[21px] font-semibold text-foreground">{t(dict, "support.whatsappCta")}</h2>
+        <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{t(dict, "support.hubBlurb")}</p>
       </section>
     </main>
   );

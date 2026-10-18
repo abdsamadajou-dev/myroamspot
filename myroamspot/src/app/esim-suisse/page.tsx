@@ -1,4 +1,4 @@
-﻿import { FunnelHero } from "../../components/funnel-hero";
+import { FunnelHero } from "../../components/funnel-hero";
 import { TrustBadges } from "../../components/trust-badges";
 import { Faq } from "../../components/faq";
 import PlanCard from "../../components/plan-card";
@@ -19,7 +19,7 @@ export default function SuissePage() {
       <FunnelHero slug={slug} />
       <TrustBadges />
       <section aria-labelledby="plans-title" className="mx-auto max-w-3xl px-4 py-10">
-        <h2 id="plans-title" className="mb-6 text-center text-xl font-semibold">
+        <h2 id="plans-title" className="mb-6 text-center text-[21px] font-bold">
           {t(dict, "ui.plansHeading")}
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

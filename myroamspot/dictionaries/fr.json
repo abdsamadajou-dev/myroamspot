@@ -1,14 +1,17 @@
 {
-  "site": { "name": "MyRoamSpot", "tagline": "Votre eSIM de voyage, partout." },
+  "site": { "name": "MyRoamSpot", "tagline": "Votre eSIM de voyage, partout.", "locale": "Français (France) · EUR" },
   "nav": { "home": "Accueil", "destinations": "Destinations", "help": "Aide" },
   "home": {
     "heroTitle": "Restez connecté partout, sans frais d'itinérance.",
     "heroSubtitle": "eSIM françaises pour l'Arabie saoudite, le Maroc, la Turquie, la Suisse et les Émirats.",
+    "searchLabel": "Destination",
     "searchPlaceholder": "Où voyagez-vous ?",
-    "searchCta": "Trouver mon eSIM"
+    "searchCta": "Trouver mon eSIM",
+    "cardMeta": "eSIM · 4G/5G · activation immédiate"
   },
-  "plan": { "days": "jours", "data": "Go", "buy": "Acheter", "ttc": "TTC" },
+  "plan": { "days": "jours", "data": "Go", "buy": "Acheter", "ttc": "TTC", "from": "dès" },
   "ui": { "plansHeading": "Choisissez votre forfait", "faqHeading": "Questions fréquentes" },
+  "footer": { "copyright": "© MyRoamSpot — Tous droits réservés." },
   "support": { "whatsappCta": "Besoin d'aide ?", "whatsappMessage": "Bonjour, j'ai une question sur mon eSIM.", "hubBlurb": "Notre équipe vous répond en français, avant et pendant votre voyage. Posez vos questions sur WhatsApp, nous vous guidons pas à pas." },
   "trust": {
     "ttc": "Prix TTC — TVA incluse",
