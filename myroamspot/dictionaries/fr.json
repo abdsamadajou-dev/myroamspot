@@ -1,0 +1,21 @@
+{
+  "site": { "name": "MyRoamSpot", "tagline": "Votre eSIM de voyage, partout." },
+  "nav": { "home": "Accueil", "destinations": "Destinations", "help": "Aide" },
+  "home": {
+    "heroTitle": "Restez connecté partout, sans frais d'itinérance.",
+    "heroSubtitle": "eSIM françaises pour l'Arabie saoudite, le Maroc, la Turquie, la Suisse et les Émirats.",
+    "searchPlaceholder": "Où voyagez-vous ?",
+    "searchCta": "Trouver mon eSIM"
+  },
+  "plan": { "days": "jours", "data": "Go", "buy": "Acheter", "ttc": "TTC" },
+  "support": { "whatsappCta": "Besoin d'aide ?", "whatsappMessage": "Bonjour, j'ai une question sur mon eSIM." },
+  "legal": { "company": "[COMPANY_NAME]", "siret": "[REGISTRATION_NUMBER]", "address": "[REGISTERED_ADDRESS]", "email": "[CONTACT_EMAIL]", "hosting": "Vercel · Supabase" },
+  "funnels": {
+    "esim-omra": { "title": "eSIM Omra — Internet à La Mecque et Médine", "description": "eSIM 5G pour l'Omra : activation instantanée à l'atterrissage de Djeddah, sans file d'attente.", "badges": ["5G à La Mecque et Médine", "WhatsApp dès l'atterrissage", "Sans file biométrique"] },
+    "esim-arabie-saoudite": { "title": "eSIM Arabie saoudite — forfait internet voyage", "description": "eSIM Arabie saoudite : couverture 5G à Riyad, Djeddah et La Mecque, installation en 2 minutes.", "badges": ["Couverture Riyad et Djeddah", "Activation immédiate", "Support français"] },
+    "esim-maroc": { "title": "eSIM Maroc — internet sans itinérance", "description": "eSIM Maroc : réseaux Maroc Telecom et Orange, idéale pour Marrakech et le désert.", "badges": ["Réseaux Maroc Telecom & Orange", "Idéale Marrakech", "Activation en 2 minutes"] },
+    "esim-suisse": { "title": "eSIM Suisse pas cher — sans frais de roaming", "description": "eSIM Suisse : évitez les pièges du roaming à la frontière franco-suisse, réseaux Swisscom et Sunrise.", "badges": ["Évite le roaming frontalier", "Réseaux Swisscom & Sunrise", "Prix en euros"] },
+    "esim-turquie": { "title": "eSIM Turquie — forfait internet Istanbul et Antalya", "description": "eSIM Turquie : couverture nationale à Istanbul, Antalya et la Cappadoce, activation instantanée.", "badges": ["Couverture nationale", "Istanbul & Antalya", "Activation instantanée"] },
+    "esim-emirats-arabes-unis": { "title": "eSIM Émirats arabes unis — internet à Dubaï", "description": "eSIM Émirats arabes unis : 5G à Dubaï et Abu Dhabi, activation à l'atterrissage.", "badges": ["5G à Dubaï et Abu Dhabi", "Activation à l'atterrissage", "Support français"] }
+  }
+}
