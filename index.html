@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAISON NOIRE — Haute Parfumerie</title>
+<meta name="description" content="Maison Noire — small-batch haute parfums. Smoked amber, fig noir, orange blossom. Free discovery set on orders over $120." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#0e0a07;
+  --coal:#17100b;
+  --cream:#f4e9d7;
+  --cream-2:#ead9bf;
+  --amber:#c9975a;
+  --amber-2:#e8c48a;
+  --rose:#b76a5a;
+  --sage:#9aa28a;
+  --line:rgba(244,233,215,.14);
+  --muted:rgba(244,233,215,.62);
+  --card:#1c1410;
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--noir);
+  color:var(--cream);
+  font-family:'Jost',sans-serif;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.08;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+::selection{background:var(--amber);color:var(--noir)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.eyebrow{
+  font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--amber-2);
+  display:flex;align-items:center;gap:12px;font-weight:500;
+}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--amber);display:inline-block}
+h1,h2,.serif{font-family:'Italiana',serif;font-weight:400;line-height:.95;letter-spacing:-.02em}
+.italic{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400}
+
+/* announcement */
+.announce{
+  background:var(--amber);color:#1a120a;text-align:center;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  padding:10px 16px;
+}
+
+/* nav */
+nav{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 32px;
+  background:rgba(14,10,7,.78);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.logo{font-family:'Italiana',serif;font-size:1.6rem;letter-spacing:.14em}
+.logo span{color:var(--amber);font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:0}
+.nav-links{display:flex;gap:32px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.nav-links a{position:relative;transition:color .3s}
+.nav-links a:hover{color:var(--cream)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.btn-ghost{
+  border:1px solid var(--line);border-radius:100px;padding:10px 20px;
+  font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;background:transparent;color:var(--cream);
+  cursor:pointer;transition:.3s;
+}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber-2)}
+.cart-btn{
+  display:flex;align-items:center;gap:10px;background:var(--cream);color:var(--noir);
+  border:0;border-radius:100px;padding:10px 18px;font-weight:600;font-size:.8rem;letter-spacing:.08em;
+  cursor:pointer;transition:.3s;
+}
+.cart-btn:hover{background:var(--amber-2);transform:translateY(-1px)}
+.cart-count{background:var(--noir);color:var(--cream);border-radius:100px;min-width:24px;height:24px;display:grid;place-items:center;font-size:.75rem}
+
+/* hero */
+.hero{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:0;min-height:88vh;
+  border-bottom:1px solid var(--line);position:relative;overflow:hidden;
+}
+.hero-left{padding:72px 48px 48px 48px;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero-left::after{
+  content:"N°";position:absolute;right:20px;bottom:-20px;font-family:'Italiana',serif;
+  font-size:22vw;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(244,233,215,.08);pointer-events:none;
+}
+.hero h1{font-size:clamp(3.4rem,7.2vw,7rem);margin:22px 0 18px;text-wrap:balance}
+.hero h1 em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--amber-2);font-weight:400}
+.hero p.lead{font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.5;color:var(--muted);max-width:46ch}
+.hero-cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn-solid{
+  background:var(--amber);color:#190f06;border:0;border-radius:100px;padding:16px 30px;
+  font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;cursor:pointer;transition:.3s;
+}
+.btn-solid:hover{background:var(--cream);transform:translateY(-2px)}
+.hero-meta{display:flex;gap:36px;margin-top:44px;border-top:1px solid var(--line);padding-top:24px}
+.hero-meta div strong{font-family:'Italiana',serif;font-size:1.7rem;display:block}
+.hero-meta div span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.hero-right{position:relative;background:#241811;overflow:hidden;min-height:520px}
+.hero-right img.main{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--noir) 0%,transparent 28%,transparent 70%,rgba(14,10,7,.55) 100%),linear-gradient(0deg,rgba(14,10,7,.6),transparent 45%)}
+.hero-card{
+  position:absolute;left:28px;right:28px;bottom:28px;z-index:3;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  background:rgba(20,13,9,.72);backdrop-filter:blur(18px);border:1px solid var(--line);
+  border-radius:18px;padding:16px 18px;
+}
+.hero-card .scent{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem}
+.hero-card small{display:block;font-family:'Jost';font-style:normal;letter-spacing:.22em;text-transform:uppercase;font-size:.65rem;color:var(--amber-2);margin-bottom:4px}
+.price{font-family:'Italiana';font-size:1.5rem}
+.badge-float{
+  position:absolute;top:28px;right:28px;z-index:3;background:var(--cream);color:var(--noir);
+  width:116px;height:116px;border-radius:50%;display:grid;place-items:center;text-align:center;
+  font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;line-height:1.4;
+  animation:spinPulse 7s ease-in-out infinite;
+}
+@keyframes spinPulse{0%,100%{transform:rotate(-6deg) scale(1)}50%{transform:rotate(6deg) scale(1.06)}}
+
+/* marquee */
+.marquee{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--coal)}
+.marquee-track{display:inline-flex;gap:48px;animation:marq 22s linear infinite;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber-2)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* section base */
+section{padding:88px 48px;max-width:1320px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2.4rem,4.5vw,4.2rem);margin-top:16px}
+.sec-head p{color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.2rem;max-width:36ch}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:.4s;position:relative;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(201,151,90,.5);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.card-img{height:300px;overflow:hidden;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:1s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-tag{
+  position:absolute;top:14px;left:14px;background:rgba(14,10,7,.7);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:100px;padding:6px 12px;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+}
+.card-body{padding:22px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h3{font-family:'Italiana';font-size:1.5rem;letter-spacing:.02em}
+.card-body .notes{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:1.02rem}
+.card-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+.add{
+  border:1px solid var(--amber);background:transparent;color:var(--amber-2);border-radius:100px;
+  padding:10px 18px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.3s;font-weight:600;
+}
+.add:hover{background:var(--amber);color:var(--noir)}
+
+/* craft */
+.craft{background:var(--cream);color:#1a120a;border-radius:28px;padding:0;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;max-width:1320px}
+.craft-left{padding:64px 56px}
+.craft-left .eyebrow{color:#8a6a2f}.craft-left .eyebrow::before{background:#8a6a2f}
+.craft-left h2{font-size:clamp(2.4rem,4vw,3.8rem);margin:18px 0}
+.craft-left p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.6;color:#4a3d2e}
+.note-list{margin-top:32px;display:grid;gap:0;border-top:1px solid rgba(26,18,10,.15)}
+.note{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(26,18,10,.15)}
+.note-num{font-family:'Italiana';font-size:1.6rem;color:#8a6a2f}
+.note h4{letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:4px}
+.note p{font-size:1rem;font-family:'Jost';color:#5a4c3a}
+.craft-right{position:relative;min-height:100%}
+.craft-right img{width:100%;height:100%;object-fit:cover;min-height:560px}
+
+/* ritual */
+.ritual{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.ritual-visual{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.ritual-visual img{width:100%;height:560px;object-fit:cover}
+.ritual-quote{
+  position:absolute;bottom:24px;left:24px;right:24px;background:rgba(14,10,7,.72);backdrop-filter:blur(16px);
+  border-radius:16px;padding:20px;border:1px solid var(--line);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;line-height:1.5;
+}
+.ritual h2{font-size:clamp(2.4rem,4vw,4rem);margin:18px 0 16px}
+.steps{display:grid;gap:16px;margin-top:28px}
+.step{display:flex;gap:18px;padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(244,233,215,.03)}
+.step b{width:36px;height:36px;border-radius:50%;background:var(--amber);color:var(--noir);display:grid;place-items:center;flex-shrink:0}
+
+/* reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review{border:1px solid var(--line);border-radius:18px;padding:28px;background:linear-gradient(180deg,rgba(244,233,215,.06),transparent)}
+.review .stars{color:var(--amber);letter-spacing:.2em;margin-bottom:14px}
+.review p{font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.55}
+.review footer{margin-top:18px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* newsletter */
+.news{
+  background:radial-gradient(600px 300px at 20% 0%,rgba(201,151,90,.28),transparent),radial-gradient(600px 400px at 90% 100%,rgba(183,106,90,.22),transparent),var(--coal);
+  border:1px solid var(--line);border-radius:28px;padding:64px 48px;text-align:center;position:relative;overflow:hidden;
+}
+.news h2{font-size:clamp(2.6rem,5vw,4.6rem)}.news h2 em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--amber-2)}
+.news p{color:var(--muted);font-family:'Cormorant Garamond',serif;font-size:1.25rem;margin:14px auto 28px;max-width:52ch}
+.form{display:flex;gap:10px;max-width:520px;margin:0 auto;background:rgba(14,10,7,.6);border:1px solid var(--line);border-radius:100px;padding:8px 8px 8px 24px}
+.form input{flex:1;background:transparent;border:0;outline:0;color:var(--cream);font-family:'Jost';font-size:.95rem}
+.form button{flex-shrink:0}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:48px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.85rem;max-width:1320px;margin:0 auto}
+footer .cols{display:flex;gap:48px}
+footer h5{color:var(--cream);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;margin-bottom:12px}
+footer li{list-style:none;margin-bottom:8px}
+footer a:hover{color:var(--amber-2)}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;top:0;right:0;bottom:0;width:min(420px,92vw);background:#150f0a;border-left:1px solid var(--line);
+  z-index:100;transform:translateX(105%);transition:.45s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;
+}
+.drawer.open{transform:none}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:22px;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-family:'Italiana';font-size:1.5rem;letter-spacing:.06em}
+.close{background:transparent;border:1px solid var(--line);color:var(--cream);width:36px;height:36px;border-radius:50%;cursor:pointer}
+.drawer-items{flex:1;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:32px;text-align:center;color:var(--muted);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem}
+.ci{display:flex;gap:14px;border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(244,233,215,.03)}
+.ci img{width:64px;height:72px;object-fit:cover;border-radius:10px}
+.ci h4{font-family:'Italiana';font-size:1.1rem}
+.ci small{color:var(--muted);font-size:.8rem}
+.qty{display:flex;align-items:center;gap:10px;margin-top:8px}
+.qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--cream);cursor:pointer}
+.drawer-foot{padding:20px 22px;border-top:1px solid var(--line);background:rgba(0,0,0,.25)}
+.total-row{display:flex;justify-content:space-between;margin-bottom:6px;color:var(--muted);font-size:.9rem}
+.total-row.grand{color:var(--cream);font-size:1.1rem;font-weight:600}
+.checkout{width:100%;margin-top:12px}
+.toast{
+  position:fixed;bottom:24px;left:50%;transform:translate(-50%,80px);background:var(--cream);color:var(--noir);
+  padding:14px 22px;border-radius:100px;font-size:.85rem;font-weight:500;z-index:120;transition:.4s;opacity:0;
+}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.8s}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:1020px){
+  .hero{grid-template-columns:1fr}.hero-right{min-height:420px}
+  .grid{grid-template-columns:1fr 1fr}
+  .craft,.ritual{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  nav{padding:14px 18px}.nav-links{display:none}
+  section{padding:56px 20px}
+  .craft-left{padding:36px 24px}
+  .news{padding:40px 20px}.form{flex-direction:column;border-radius:20px;padding:12px}
+  .form button{width:100%}
+}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero-left{padding:40px 20px}.hero-meta{flex-wrap:wrap;gap:18px}}
+</style>
+</head>
+<body>
+
+<div class="announce">Complimentary discovery set on orders over $120 — Grasse · Paris · New York</div>
+
+<nav>
+  <a class="logo" href="#">MAISON <span>Noire</span></a>
+  <div class="nav-links">
+    <a href="#shop">Collection</a>
+    <a href="#craft">Savoir-faire</a>
+    <a href="#ritual">Ritual</a>
+    <a href="#avis">Avis</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="document.getElementById('shop').scrollIntoView()">Discover</button>
+    <button class="cart-btn" id="openCart">Panier <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Haute parfumerie — depuis 1987</div>
+    <h1>Wear the night, <em>bottle the light.</em></h1>
+    <p class="lead">Small-batch extraits de parfum composed in Grasse. Smoked amber, black fig, orange blossom — macerated 8 weeks, never rushed, always unforgettable.</p>
+    <div class="hero-cta">
+      <button class="btn-solid" onclick="document.getElementById('shop').scrollIntoView()">Shop the collection</button>
+      <button class="btn-ghost" onclick="document.getElementById('craft').scrollIntoView()">Our craft ↓</button>
+    </div>
+    <div class="hero-meta">
+      <div><strong>27</strong><span>rare essences</span></div>
+      <div><strong>8 wks</strong><span>maceration</span></div>
+      <div><strong>4.9 ★</strong><span>12k avis</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="main" src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=1200&q=80&auto=format&fit=crop" alt="Maison Noire perfume bottle" />
+    <div class="badge-float">Extrait<br/>de<br/>parfum</div>
+    <div class="hero-card">
+      <div>
+        <small>Best-seller — N°04</small>
+        <div class="scent">Ambre Fumé — smoked amber & vanilla bourbon</div>
+      </div>
+      <div style="text-align:right">
+        <div class="price">$185</div>
+        <button class="add" data-add="ambre">Add +</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="marquee-track" id="marq"></div></div>
+
+<section id="shop">
+  <div class="sec-head reveal">
+    <div>
+      <div class="eyebrow">La collection</div>
+      <h2>Four moods, <span class="italic" style="color:var(--amber-2)">one signature.</span></h2>
+    </div>
+    <p>All extraits at 24% concentration. 50ml flacons, hand-poured and sealed with wax.</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section style="padding-top:0">
+  <div class="craft reveal" id="craft">
+    <div class="craft-left">
+      <div class="eyebrow">Savoir-faire</div>
+      <h2>Slow perfume in a fast world.</h2>
+      <p>We buy whole harvests from three family farms in Grasse and Calabria, distill in copper, then let the jus rest. No accelerants. No shortcuts.</p>
+      <div class="note-list">
+        <div class="note"><div class="note-num">I</div><div><h4>Tête — Top</h4><p>Bergamot, pink pepper, fig leaf</p></div><span>0–20 min</span></div>
+        <div class="note"><div class="note-num">II</div><div><h4>Cœur — Heart</h4><p>Orange blossom, Turkish rose, iris</p></div><span>2–6 hrs</span></div>
+        <div class="note"><div class="note-num">III</div><div><h4>Fond — Base</h4><p>Smoked amber, vetiver, vanilla bourbon</p></div><span>12 hrs +</span></div>
+      </div>
+    </div>
+    <div class="craft-right">
+      <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1000&q=80&auto=format&fit=crop" alt="Perfume ingredients" />
+    </div>
+  </div>
+</section>
+
+<section class="ritual reveal" id="ritual">
+  <div class="ritual-visual">
+    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=1000&q=80&auto=format&fit=crop" alt="Perfume ritual" />
+    <div class="ritual-quote">“One spray on the pulse. Let it warm. Never rub — you bruise the top notes.” — Hélène Noire, founder</div>
+  </div>
+  <div>
+    <div class="eyebrow">Le rituel</div>
+    <h2>How to wear extrait.</h2>
+    <p class="italic" style="font-size:1.3rem;color:var(--muted)">Extrait is oil-rich. Less is more — two sprays lasts dawn to midnight.</p>
+    <div class="steps">
+      <div class="step"><b>1</b><div><strong>Pulse, don't cloud.</strong><br/><span style="color:var(--muted)">Neck, wrist, behind the ear. Warm skin diffuses amber.</span></div></div>
+      <div class="step"><b>2</b><div><strong>Layer with oil.</strong><br/><span style="color:var(--muted)">Unscented balm first doubles longevity.</span></div></div>
+      <div class="step"><b>3</b><div><strong>Keep it dark.</strong><br/><span style="color:var(--muted)">Store away from light. Your flacon ages like wine.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="avis" style="padding-top:0">
+  <div class="sec-head reveal">
+    <div>
+      <div class="eyebrow">Avis clients</div>
+      <h2>Loved, worn, remembered.</h2>
+    </div>
+  </div>
+  <div class="reviews-grid">
+    <div class="review reveal"><div class="stars">★★★★★</div><p>“Ambre Fumé got me stopped twice in one evening. Smoky without being heavy — pure velvet.”</p><footer>Camille R. — Paris · Verified</footer></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>“Fig Noir is green, sappy, electric. I’ve finished three bottles. Nothing else smells like this.”</p><footer>Jonas K. — Berlin · Verified</footer></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><p>“Ordered Tuesday, wearing it Friday. The wax seal, the letter, the sillage — worth every dollar.”</p><footer>Amara O. — New York · Verified</footer></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="news reveal">
+    <div class="eyebrow" style="justify-content:center">La liste privée</div>
+    <h2>Get <em>15% off</em> your first flacon.</h2>
+    <p>Join 28,000 lovers of slow perfume. Early drops, harvest stories, private sales. No spam — one letter a month.</p>
+    <form class="form" id="newsForm">
+      <input type="email" required placeholder="your@email.com" aria-label="email" />
+      <button class="btn-solid" type="submit">Join →</button>
+    </form>
+    <small style="color:var(--muted);display:block;margin-top:14px;letter-spacing:.12em">FREE SHIPPING OVER $120 · 30-DAY RETURNS · 2 FREE SAMPLES PER ORDER</small>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="logo" style="margin-bottom:10px">MAISON <span style="color:var(--amber)">Noire</span></div>
+    <div>Grasse · Paris · New York<br/>© 2026 Maison Noire. All rights reserved.</div>
+  </div>
+  <div class="cols">
+    <div><h5>Shop</h5><ul><li><a href="#shop">All parfums</a></li><li><a href="#shop">Discovery set</a></li><li><a href="#shop">Gift cards</a></li></ul></div>
+    <div><h5>Maison</h5><ul><li><a href="#craft">Savoir-faire</a></li><li><a href="#ritual">Ritual</a></li><li><a href="#avis">Avis</a></li></ul></div>
+    <div><h5>Care</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="cart">
+  <div class="drawer-head"><h3>Votre panier ( <span id="drawerCount">0</span> )</h3><button class="close" id="closeCart">✕</button></div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Shipping</span><span id="shipLabel">Free over $120</span></div>
+    <div class="total-row grand"><span>Total</span><span id="grandTotal">$0</span></div>
+    <button class="btn-solid checkout" id="checkoutBtn">Checkout →</button>
+  </div>
+</aside>
+<div class="toast" id="toast">Added to panier ✓</div>
+
+<script>
+const PRODUCTS = [
+  {id:'ambre', name:'Ambre Fumé N°04', notes:'Smoked amber · vanilla bourbon · vetiver', price:185, tag:'Best-seller', img:'https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80&auto=format&fit=crop'},
+  {id:'fig', name:'Fig Noir N°07', notes:'Black fig · fig leaf · cedarwood', price:165, tag:'New harvest', img:'https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80&auto=format&fit=crop'},
+  {id:'rose', name:'Rose Poudrée N°02', notes:'Turkish rose · iris · white musk', price:175, tag:'Iconic', img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80&auto=format&fit=crop'},
+  {id:'neroli', name:'Néroli Soleil N°11', notes:'Orange blossom · bergamot · sea salt', price:155, tag:'Limited', img:'https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80&auto=format&fit=crop'},
+];
+const cart = new Map();
+const grid = document.getElementById('productGrid');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+grid.innerHTML = PRODUCTS.map(p => `
+  <article class="card reveal visible">
+    <div class="card-img"><span class="card-tag">${p.tag}</span><img loading="lazy" src="${p.img}" alt="${p.name}"/></div>
+    <div class="card-body">
+      <h3>${p.name}</h3>
+      <div class="notes">${p.notes}</div>
+      <div class="card-row"><span class="price">$${p.price}</span><button class="add" data-add="${p.id}">Add to panier</button></div>
+    </div>
+  </article>`).join('');
+
+document.getElementById('marq').innerHTML = Array(2).fill('Extrait de parfum 24% &nbsp;✦&nbsp; Hand-poured in Grasse &nbsp;✦&nbsp; Free discovery set over $120 &nbsp;✦&nbsp; 30-day returns &nbsp;✦&nbsp; ').join('');
+
+function fmt(n){return '$'+n.toLocaleString()}
+function render(){
+  const items=[...cart.entries()];
+  const count=items.reduce((a,[,q])=>a+q,0);
+  const total=items.reduce((a,[id,q])=>a+PRODUCTS.find(p=>p.id===id).price*q,0);
+  document.getElementById('cartCount').textContent=count;
+  document.getElementById('drawerCount').textContent=count;
+  document.getElementById('grandTotal').textContent=fmt(total);
+  document.getElementById('shipLabel').textContent = total>=120 ? 'Free ✓' : (total===0?'Free over $120':fmt(12)+' · add '+fmt(120-total));
+  const box=document.getElementById('drawerItems');
+  if(!items.length){box.innerHTML='<div class="empty">Your panier is empty.<br/>Your signature scent is waiting…</div>';return}
+  box.innerHTML=items.map(([id,q])=>{
+    const p=PRODUCTS.find(x=>x.id===id);
+    return `<div class="ci"><img src="${p.img}" alt=""/><div style="flex:1"><h4>${p.name}</h4><small>${fmt(p.price)} · 50ml</small>
+    <div class="qty"><button data-dec="${id}">−</button><span>${q}</span><button data-inc="${id}">+</button>
+    <span style="margin-left:auto">${fmt(p.price*q)}</span></div></div></div>`
+  }).join('');
+}
+function toast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),1800);
+}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-add]');if(a){const id=a.dataset.add;cart.set(id,(cart.get(id)||0)+1);render();toast('Added to panier ✓');openDrawer();return}
+  const inc=e.target.closest('[data-inc]');if(inc){const id=inc.dataset.inc;cart.set(id,cart.get(id)+1);render();return}
+  const dec=e.target.closest('[data-dec]');if(dec){const id=dec.dataset.dec;const q=cart.get(id)-1;q<=0?cart.delete(id):cart.set(id,q);render();return}
+});
+function openDrawer(){drawer.classList.add('open');overlay.classList.add('show')}
+function closeDrawer(){drawer.classList.remove('open');overlay.classList.remove('show')}
+document.getElementById('openCart').onclick=openDrawer;
+document.getElementById('closeCart').onclick=closeDrawer;
+overlay.onclick=closeDrawer;
+document.getElementById('checkoutBtn').onclick=()=>{
+  if(!cart.size){toast('Your panier is empty');return}
+  toast('Merci! Demo checkout — order simulated ✓');cart.clear();render();
+};
+document.getElementById('newsForm').onsubmit=e=>{e.preventDefault();e.target.reset();toast('Bienvenue! Code NOIRE15 sent ✓')};
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add('visible')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+render();
+</script>
+</body>
+</html>

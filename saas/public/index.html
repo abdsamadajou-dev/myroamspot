@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Taskflow — Mini SaaS</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<nav><a class="logo" href="#landing">Taskflow</a>
+<span class="links"><a href="#pricing">Pricing</a><a href="#login">Login</a><a href="#app">Dashboard</a></span>
+<span id="navUser"></span></nav>
+<main>
+  <section id="view-landing" class="view"><h1>Tasks for focused teams.</h1>
+    <p class="muted">Free up to 10 tasks. Pro unlocks unlimited tasks.</p>
+    <p><a class="btn" href="#pricing">See pricing</a> <a class="btn ghost" href="#login">Get started</a></p></section>
+  <section id="view-pricing" class="view hidden"><h1>Pricing</h1>
+    <div class="plans"><div class="plan"><h3>Free</h3><p class="big">$0</p><p>10 tasks</p></div>
+    <div class="plan pro"><h3>Pro (demo)</h3><p class="big">$9/mo</p><p>Unlimited tasks</p>
+    <button class="btn" id="upgradeBtn">Upgrade (demo, no charge)</button></div></div>
+    <p class="muted">Prod: Stripe Checkout via POST /api/billing/checkout.</p></section>
+  <section id="view-login" class="view hidden"><h1>Login / Signup</h1>
+    <input id="email" type="email" placeholder="you@mail.com"/><input id="password" type="password" placeholder="min 8 chars"/>
+    <div><button class="btn" id="loginBtn">Login</button> <button class="btn ghost" id="signupBtn">Signup</button>
+    <button class="btn ghost" id="logoutBtn">Logout</button></div><p id="authMsg" class="muted"></p></section>
+  <section id="view-app" class="view hidden"><h1>Dashboard</h1>
+    <p id="usage" class="muted"></p><div class="bar"><div id="barFill"></div></div>
+    <div><input id="newTitle" placeholder="New task…"/><button class="btn" id="addBtn">Add</button></div>
+    <ul id="list"></ul></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
