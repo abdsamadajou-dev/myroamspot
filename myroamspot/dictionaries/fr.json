@@ -8,14 +8,50 @@
     "searchCta": "Trouver mon eSIM"
   },
   "plan": { "days": "jours", "data": "Go", "buy": "Acheter", "ttc": "TTC" },
-  "support": { "whatsappCta": "Besoin d'aide ?", "whatsappMessage": "Bonjour, j'ai une question sur mon eSIM." },
+  "ui": { "plansHeading": "Choisissez votre forfait", "faqHeading": "Questions fréquentes" },
+  "support": { "whatsappCta": "Besoin d'aide ?", "whatsappMessage": "Bonjour, j'ai une question sur mon eSIM.", "hubBlurb": "Notre équipe vous répond en français, avant et pendant votre voyage. Posez vos questions sur WhatsApp, nous vous guidons pas à pas." },
   "trust": {
     "ttc": "Prix TTC — TVA incluse",
     "coverage": "Réseaux locaux 4G/5G",
     "support": "Support WhatsApp en français",
     "install": "Installation en 2 minutes"
   },
-  "legal": { "company": "[COMPANY_NAME]", "siret": "[REGISTRATION_NUMBER]", "address": "[REGISTERED_ADDRESS]", "email": "[CONTACT_EMAIL]", "hosting": "Vercel · Supabase" },
+  "legal": {
+    "company": "[COMPANY_NAME]",
+    "siret": "[REGISTRATION_NUMBER]",
+    "address": "[REGISTERED_ADDRESS]",
+    "email": "[CONTACT_EMAIL]",
+    "hosting": "Vercel · Supabase",
+    "links": { "mentions": "Mentions légales", "cgv": "CGV", "privacy": "Politique de confidentialité" },
+    "documents": {
+      "mentionsLegales": {
+        "title": "Mentions légales",
+        "sections": [
+          { "heading": "Éditeur du site", "paragraphs": ["Le site MyRoamSpot est édité par : {company}, immatriculée sous le numéro {siret}, dont le siège social est situé : {address}.", "Contact : {email}."] },
+          { "heading": "Hébergement", "paragraphs": ["{hosting}"] }
+        ]
+      },
+      "cgv": {
+        "title": "Conditions générales de vente",
+        "sections": [
+          { "heading": "1. Objet", "paragraphs": ["Les présentes conditions régissent la vente de forfaits eSIM prépayés proposés sur le site MyRoamSpot. Tous les prix sont affichés en euros, toutes taxes comprises (TTC)."] },
+          { "heading": "2. Commande et livraison", "paragraphs": ["Après paiement confirmé, votre code QR d'installation eSIM est envoyé à l'adresse email indiquée lors de la commande. L'eSIM est un produit numérique : aucune expédition physique n'a lieu."] },
+          { "heading": "3. Droit de rétractation — produits numériques", "paragraphs": ["Conformément à l'article L221-28 13° du Code de la consommation, le droit de rétractation ne peut être exercé pour les biens numériques livrés avec votre accord avant la fin du délai de 14 jours."] },
+          { "heading": "4. Politique de remboursement", "paragraphs": ["Remboursement intégral sous 14 jours si et seulement si l'eSIM n'a pas été installée ou activée, sans aucune consommation de données.", "Une fois l'eSIM installée ou activée, ou dès lors qu'une consommation est constatée, aucun remboursement ne peut être accordé, conformément au caractère nominatif et périssable du produit numérique."] },
+          { "heading": "5. Service client", "paragraphs": ["Une question ? Notre support vous répond en français, notamment via WhatsApp : {email}."] }
+        ]
+      },
+      "privacy": {
+        "title": "Politique de confidentialité",
+        "sections": [
+          { "heading": "Responsable du traitement", "paragraphs": ["{company}, {address}. Contact : {email}."] },
+          { "heading": "Données collectées", "paragraphs": ["Nous collectons uniquement les données nécessaires à la fourniture du service : email de commande, identifiant de la session de paiement, et données techniques de provisionnement de l'eSIM (code QR, identifiant de forfait). Aucune donnée de navigation n'est revendue à des tiers."] },
+          { "heading": "Sous-traitants", "paragraphs": ["Hébergement : {hosting}. Paiement : votre prestataire de paiement agit en qualité de marchand de référence et traite les données de paiement selon ses propres conditions. Provisionnement eSIM : notre opérateur technique reçoit uniquement les données strictement nécessaires à l'activation."] },
+          { "heading": "Vos droits (RGPD)", "paragraphs": ["Vous disposez des droits d'accès, de rectification, d'effacement et de portabilité. Pour les exercer, écrivez à {email}. Vous pouvez également saisir la CNIL."] }
+        ]
+      }
+    }
+  },
   "funnels": {
     "esim-omra": { "title": "eSIM Omra — Internet à La Mecque et Médine", "description": "eSIM 5G pour l'Omra : activation instantanée à l'atterrissage de Djeddah, sans file d'attente.", "badges": ["5G à La Mecque et Médine", "WhatsApp dès l'atterrissage", "Sans file biométrique"], "faqs": [
       { "q": "Mon téléphone est-il compatible avec l'eSIM ?", "a": "Les iPhone 13 et plus récents ainsi que la plupart des Samsung Galaxy récents sont compatibles. Il faut simplement que votre téléphone soit débloqué (non lié à un opérateur français)." },

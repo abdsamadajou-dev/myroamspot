@@ -20,7 +20,6 @@ function walk(dir) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) return walk(full);
     // Test files intentionally reference missing keys; skip them.
-    // Test files intentionally reference missing keys; skip them.
     if (full.includes("__tests__") || /\.test\.tsx?$/.test(full)) return [];
     return /\.(ts|tsx)$/.test(entry) ? [full] : [];
   });

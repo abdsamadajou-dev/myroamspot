@@ -1,8 +1,10 @@
-import { FunnelHero, TrustBadges } from "../../components/funnel-hero";
+﻿import { FunnelHero } from "../../components/funnel-hero";
+import { TrustBadges } from "../../components/trust-badges";
 import { Faq } from "../../components/faq";
 import PlanCard from "../../components/plan-card";
 import { getPackages } from "../../lib/packages";
 import { buildFunnelMetadata, buildProductJsonLd } from "../../lib/seo";
+import { getDictionary, t } from "../../lib/i18n";
 
 const slug = "esim-turquie";
 const destinationSlug = "turquie";
@@ -10,6 +12,7 @@ const destinationSlug = "turquie";
 export const metadata = buildFunnelMetadata(slug);
 
 export default function TurquiePage() {
+  const dict = getDictionary("fr");
   const packs = getPackages(destinationSlug);
   return (
     <main>
@@ -17,7 +20,7 @@ export default function TurquiePage() {
       <TrustBadges />
       <section aria-labelledby="plans-title" className="mx-auto max-w-3xl px-4 py-10">
         <h2 id="plans-title" className="mb-6 text-center text-xl font-semibold">
-          Choisissez votre forfait
+          {t(dict, "ui.plansHeading")}
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {packs.map((pack) => (
@@ -33,3 +36,5 @@ export default function TurquiePage() {
     </main>
   );
 }
+
+

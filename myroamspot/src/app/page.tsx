@@ -9,10 +9,14 @@ export default function Home() {
         {t(dict, "home.heroTitle")}
       </h1>
       <p className="max-w-xl text-muted-foreground">{t(dict, "home.heroSubtitle")}</p>
-      <div className="w-full max-w-xl">
+      <div id="destinations" className="w-full max-w-xl">
         <p className="mb-3 text-sm text-muted-foreground">{t(dict, "home.searchPlaceholder")}</p>
         <DestinationSearch />
       </div>
+      <section id="aide" className="w-full max-w-xl rounded-2xl border bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold">{t(dict, "support.whatsappCta")}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{t(dict, "support.hubBlurb")}</p>
+      </section>
     </main>
   );
 }

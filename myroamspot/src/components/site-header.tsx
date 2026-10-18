@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getDictionary, t } from "../lib/i18n";
+import { BRAND } from "../lib/site";
 
 export function SiteHeader() {
   const dict = getDictionary("fr");
@@ -12,7 +13,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="text-lg font-bold tracking-tight">
-          MyRoamSpot
+          {BRAND}
         </Link>
         <nav className="flex gap-4 text-sm">
           {nav.map((item) => (
