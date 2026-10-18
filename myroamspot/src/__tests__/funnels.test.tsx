@@ -22,7 +22,7 @@ describe("funnels", () => {
   });
   it("emits title, description, and canonical for a funnel", () => {
     const meta = buildFunnelMetadata("esim-maroc");
-    expect(meta.title).toBe("eSIM Maroc — internet sans itinérance");
+    expect(meta.title).toBe("eSIM Maroc — Marrakech, Casa, Agadir, Tanger sans frais de roaming");
     expect(meta.description).toContain("Maroc Telecom");
     expect(meta.alternates?.canonical).toBe("https://myroamspot.com/esim-maroc");
   });

@@ -21,6 +21,14 @@ export const DESTINATION_LABELS: Record<(typeof DESTINATION_SLUGS)[number], stri
   "esim-emirats-arabes-unis": "Émirats arabes unis",
 };
 
+// Grid on the homepage shows the five country cards — Saudi Arabia represents
+// the kingdom, and the Omra edition is reached via the callout inside
+// /esim-arabie-saoudite plus its own SEO funnel. /esim-omra stays a route and
+// stays in the sitemap.
+export const DESTINATION_GRID_SLUGS: readonly DestinationSlug[] = DESTINATION_SLUGS.filter(
+  (slug) => slug !== "esim-omra",
+);
+
 // License-safe photography (Unsplash license permits hotlinking). Serve-side
 // params keep the payload small (800px, auto format). When the catalog moves to
 // Supabase (Plan 2), these URLs move with it; alts stay French for MVP.

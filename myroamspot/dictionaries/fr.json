@@ -2,14 +2,20 @@
   "site": { "name": "MyRoamSpot", "tagline": "Votre eSIM de voyage, partout.", "locale": "Français (France) · EUR" },
   "nav": { "home": "Accueil", "destinations": "Destinations", "help": "Aide" },
   "home": {
-    "heroTitle": "Restez connecté partout, sans frais d'itinérance.",
-    "heroSubtitle": "eSIM françaises pour l'Arabie saoudite, le Maroc, la Turquie, la Suisse et les Émirats.",
+    "heroTitle": "Atterrissez connecté. Zéro hors-forfait, 100% sérénité.",
+    "heroSubtitle": "Activez votre eSIM en 1 minute. Conservez votre numéro WhatsApp habituel et profitez de la meilleure 5G locale dès l'ouverture des portes de l'avion.",
     "searchLabel": "Destination",
     "searchPlaceholder": "Où voyagez-vous ?",
     "searchCta": "Trouver mon eSIM",
-    "cardMeta": "eSIM · 4G/5G · activation immédiate"
+    "cardMeta": "eSIM · 4G/5G · activation immédiate",
+    "stepsHeading": "Comment ça marche",
+    "steps": [
+      { "title": "Choisissez votre destination", "description": "En quelques clics, sans engagement." },
+      { "title": "Scannez votre QR code", "description": "Reçu instantanément par e-mail." },
+      { "title": "Surfez dès l'atterrissage", "description": "Connexion automatique aux réseaux partenaires officiels." }
+    ]
   },
-  "plan": { "days": "jours", "data": "Go", "buy": "Acheter", "ttc": "TTC", "from": "dès" },
+  "plan": { "days": "jours", "data": "Go", "buy": "Obtenir mon eSIM", "ttc": "TTC", "from": "dès", "bestTag": "🔥 Le Choix des Voyageurs (Recommandé)", "reassurance": "⚡ Livraison instantanée par e-mail • Sans engagement" },
   "ui": { "plansHeading": "Choisissez votre forfait", "faqHeading": "Questions fréquentes" },
   "footer": { "copyright": "© MyRoamSpot — Tous droits réservés." },
   "support": { "whatsappCta": "Besoin d'aide ?", "whatsappMessage": "Bonjour, j'ai une question sur mon eSIM.", "hubBlurb": "Notre équipe vous répond en français, avant et pendant votre voyage. Posez vos questions sur WhatsApp, nous vous guidons pas à pas." },
@@ -56,36 +62,71 @@
     }
   },
   "funnels": {
-    "esim-omra": { "title": "eSIM Omra — Internet à La Mecque et Médine", "description": "eSIM 5G pour l'Omra : activation instantanée à l'atterrissage de Djeddah, sans file d'attente.", "badges": ["5G à La Mecque et Médine", "WhatsApp dès l'atterrissage", "Sans file biométrique"], "faqs": [
-      { "q": "Mon téléphone est-il compatible avec l'eSIM ?", "a": "Les iPhone 13 et plus récents ainsi que la plupart des Samsung Galaxy récents sont compatibles. Il faut simplement que votre téléphone soit débloqué (non lié à un opérateur français)." },
-      { "q": "Quand mon forfait démarre-t-il ?", "a": "Le forfait démarre à l'activation de l'eSIM. Nous conseillons de l'installer à l'atterrissage à Djeddah : vous êtes connecté avant même de quitter l'aéroport." },
-      { "q": "Puis-je appeler sur WhatsApp ?", "a": "Oui. L'eSIM fournit une connexion internet (data) : WhatsApp, Google Maps et toutes vos applications fonctionnent normalement, comme en France." },
-      { "q": "Et si j'ai un problème à l'arrivée ?", "a": "Notre support vous répond sur WhatsApp en français, avant, pendant et après votre pèlerinage." }
-    ] },
-    "esim-arabie-saoudite": { "title": "eSIM Arabie saoudite — forfait internet voyage", "description": "eSIM Arabie saoudite : couverture 5G à Riyad, Djeddah et La Mecque, installation en 2 minutes.", "badges": ["Couverture Riyad et Djeddah", "Activation immédiate", "Support français"], "faqs": [
-      { "q": "Quels opérateurs Saudi sont utilisés ?", "a": "Votre eSIM se connecte automatiquement aux meilleurs réseaux locaux du royaume, y compris la 5G à Riyad et Djeddah." },
-      { "q": "Dois-je retirer ma carte SIM française ?", "a": "Non, l'eSIM s'ajoute à votre SIM habituelle : votre numéro français reste joignable pendant que vos données passent par l'eSIM." },
-      { "q": "Combien de Go me faut-il ?", "a": "Pour un séjour de 10 jours (WhatsApp, plans, quelques vidéos), 5 Go suffisent généralement. Les grands consommateurs choisiront 10 ou 20 Go." }
-    ] },
-    "esim-maroc": { "title": "eSIM Maroc — internet sans itinérance", "description": "eSIM Maroc : réseaux Maroc Telecom et Orange, idéale pour Marrakech et le désert.", "badges": ["Réseaux Maroc Telecom & Orange", "Idéale Marrakech", "Activation en 2 minutes"], "faqs": [
-      { "q": "Vais-je payer des frais de roaming ?", "a": "Non. L'eSIM Maroc est un forfait local acheté en euros : votre facture française ne bouge pas d'un centime." },
-      { "q": "La couverture est-elle bonne à Marrakech et dans le désert ?", "a": "Vous utilisez les réseaux Maroc Telecom et Orange : excellente couverture à Marrakech, Fès et Casablanca, et au-delà des grandes agglomérations." },
-      { "q": "Puis-je partager ma connexion ?", "a": "Oui, le partage de connexion (hotspot) fonctionne normalement pour connecter votre ordinateur ou ceux de votre famille." }
-    ] },
-    "esim-suisse": { "title": "eSIM Suisse pas cher — sans frais de roaming", "description": "eSIM Suisse : évitez les pièges du roaming à la frontière franco-suisse, réseaux Swisscom et Sunrise.", "badges": ["Évite le roaming frontalier", "Réseaux Swisscom & Sunrise", "Prix en euros"], "faqs": [
-      { "q": "Pourquoi ne pas utiliser mon forfait français en Suisse ?", "a": "La Suisse n'est pas dans l'UE : beaucoup de forfaits français facturent le roaming hors Union européenne, parfois 5 à 10 € par Go. L'eSIM Swisscom/Sunrise élimine ce risque." },
-      { "q": "Les prix sont-ils en euros ?", "a": "Oui, tous nos forfaits sont affichés et payés en euros TTC. Aucun frais surprise en francs suisses." },
-      { "q": "Ça fonctionne aussi à Genève et Zermatt ?", "a": "Oui : couverture nationale sur les réseaux Swisscom et Sunrise, de Genève aux stations de ski." }
-    ] },
-    "esim-turquie": { "title": "eSIM Turquie — forfait internet Istanbul et Antalya", "description": "eSIM Turquie : couverture nationale à Istanbul, Antalya et la Cappadoce, activation instantanée.", "badges": ["Couverture nationale", "Istanbul & Antalya", "Activation instantanée"], "faqs": [
-      { "q": "Faut-il enregistrer la eSIM à Istanbul ?", "a": "Non : installez-la depuis l'email reçu après votre paiement et elle s'active dès que vous allumez le mode données sur place, aéroport compris." },
-      { "q": "Est-ce que ça marche en Cappadoce ou sur la côte ?", "a": "Oui, la couverture est nationale : Istanbul, Antalya, la Cappadoce, Bodrum, Çanakkale et les grandes routes." },
-      { "q": "Je change souvent d'île de villégiature, ça marche ?", "a": "Pas d'île en Turquie continentale, mais l'eSIM bascule automatiquement d'une ville à l'autre sans rien reconfigurer." }
-    ] },
-    "esim-emirats-arabes-unis": { "title": "eSIM Émirats arabes unis — internet à Dubaï", "description": "eSIM Émirats arabes unis : 5G à Dubaï et Abu Dhabi, activation à l'atterrissage.", "badges": ["5G à Dubaï et Abu Dhabi", "Activation à l'atterrissage", "Support français"], "faqs": [
-      { "q": "La 5G est-elle disponible à Dubaï ?", "a": "Oui, la 5G est utilisable là où l'opérateur local la propose, notamment sur l'axe Dubaï–Abu Dhabi." },
-      { "q": "Puis-je garder mon numéro français actif ?", "a": "Oui : l'eSIM s'ajoute à votre SIM française. Vous gardez vos SMS de confirmation bancaire pendant vos achats à Dubaï." },
-      { "q": "Que couvre exactement l'eSIM ?", "a": "Les sept émirats : Dubaï, Abu Dhabi, Sharjah, Ajman, Ras el Khaïmah, Fujairah et Oumm al Qaïwaïn." }
-    ] }
+    "esim-omra": {
+      "title": "eSIM Omra — Internet 5G à La Mecque et Médine, sans file d'attente",
+      "description": "Pèlerinage serein : votre eSIM 5G prête avant même Djeddah. Vidéo avec votre famille depuis le Haram, Uber, Careem et app Nusuk dès la sortie de l'avion. Aucune file à l'aéroport.",
+      "badges": ["5G à La Mecque et Médine", "App Nusuk, Uber & Careem dès l'atterrissage", "Zéro file à l'aéroport de Djeddah"],
+      "faqs": [
+        { "q": "Mon téléphone est-il compatible avec l'eSIM ?", "a": "Les iPhone 13 et plus récents ainsi que la plupart des Samsung Galaxy récents sont compatibles. Il faut simplement que votre téléphone soit débloqué (non lié à un opérateur français)." },
+        { "q": "Quand mon forfait démarre-t-il ?", "a": "Le forfait démarre à l'activation de l'eSIM. Nous conseillons de l'installer la veille du départ : vous êtes déjà connecté en sortant de l'avion à Djeddah, sans passer par la file des cartes SIM touristiques." },
+        { "q": "Je peux appeler ma famille depuis le Haram ?", "a": "Oui. L'eSIM fournit une connexion data (5G) : WhatsApp, FaceTime et toutes vos applications fonctionnent normalement, comme en France, y compris devant la Kaaba." },
+        { "q": "L'app Nusuk, Uber ou Careem fonctionnent-elles ?", "a": "Oui. Vos applications de pèlerinage et de transport utilisent votre connexion eSIM : réservez votre Nusuk et appelez un Uber dès la sortie de l'aéroport, avant même d'avoir trouvé la file des SIM." },
+        { "q": "Et si j'ai un problème pendant le pèlerinage ?", "a": "Notre support vous répond sur WhatsApp en français, avant, pendant et après votre Omra." }
+      ]
+    },
+    "esim-arabie-saoudite": {
+      "title": "eSIM Arabie saoudite — Riyad, Djeddah, La Mecque en 5G",
+      "description": "Toute la 5G du royaume dans un forfait eSIM : installation en 2 minutes depuis votre e-mail, connexion au meilleur réseau local dès l'atterrissage. Prix en euros TTC, sans surprise.",
+      "badges": ["Riyad, Djeddah et La Mecque en 5G", "Activation en 2 minutes", "Support WhatsApp en français"],
+      "callout": {
+        "text": "Vous voyagez pour la Omra ou le Hajj ? Découvrez notre forfait optimisé avec accès 5G instantané à La Mecque et Médine.",
+        "cta": "Voir l'édition Omra"
+      },
+      "faqs": [
+        { "q": "Quels réseaux saoudiens sont utilisés ?", "a": "Votre eSIM se connecte automatiquement aux meilleurs réseaux locaux du royaume, y compris la 5G à Riyad et Djeddah." },
+        { "q": "Dois-je retirer ma carte SIM française ?", "a": "Non, l'eSIM s'ajoute à votre SIM habituelle : votre numéro français reste joignable pendant que vos données passent par l'eSIM." },
+        { "q": "Combien de Go me faut-il ?", "a": "Pour un séjour de 10 jours (WhatsApp, plans, quelques vidéos), 5 Go suffisent généralement. Les grands consommateurs choisiront 10 ou 20 Go." }
+      ]
+    },
+    "esim-maroc": {
+      "title": "eSIM Maroc — Marrakech, Casa, Agadir, Tanger sans frais de roaming",
+      "description": "Réseaux Maroc Telecom et Orange couvrant les autoroutes comme les grandes villes : Marrakech, Agadir, Casablanca, Tanger et au-delà. Forfait local en euros : votre facture française ne bouge pas.",
+      "badges": ["Maroc Telecom & Orange", "Autoroutes et villes couvertes", "Zéro frais d'itinérance"],
+      "faqs": [
+        { "q": "Vais-je payer des frais de roaming ?", "a": "Non. L'eSIM Maroc est un forfait local acheté en euros : votre facture française ne bouge pas d'un centime." },
+        { "q": "La couverture est-elle bonne à Marrakech et dans le désert ?", "a": "Vous utilisez les réseaux Maroc Telecom et Orange : excellente couverture à Marrakech, Fès et Casablanca, et au-delà des grandes agglomérations." },
+        { "q": "Puis-je partager ma connexion ?", "a": "Oui, le partage de connexion (hotspot) fonctionne normalement pour connecter votre ordinateur ou ceux de votre famille." }
+      ]
+    },
+    "esim-suisse": {
+      "title": "eSIM Suisse — forfait fixe en euros, zéro facture de roaming",
+      "description": "La Suisse n'est pas dans l'UE : évitez les frais d'itinérance exorbitants à la frontière (jusqu'à 5–10 € par Go). Un forfait fixe en euros sur les réseaux Swisscom et Sunrise, de Genève à Zermatt.",
+      "badges": ["Zéro facture de roaming", "Réseaux Swisscom & Sunrise", "Prix fixe en euros"],
+      "faqs": [
+        { "q": "Pourquoi ne pas utiliser mon forfait français en Suisse ?", "a": "La Suisse n'est pas dans l'UE : beaucoup de forfaits français facturent le roaming hors Union européenne, parfois 5 à 10 € par Go. L'eSIM Swisscom/Sunrise élimine ce risque." },
+        { "q": "Les prix sont-ils en euros ?", "a": "Oui, tous nos forfaits sont affichés et payés en euros TTC. Aucun frais surprise en francs suisses." },
+        { "q": "Ça fonctionne aussi à Genève et Zermatt ?", "a": "Oui : couverture nationale sur les réseaux Swisscom et Sunrise, de Genève aux stations de ski." }
+      ]
+    },
+    "esim-turquie": {
+      "title": "eSIM Turquie — Istanbul et Antalya connectées instantanément",
+      "description": "Vacances en famille ou déplacement pro : eSIM Turquie active en 2 minutes, couverture nationale 5G à Istanbul, Antalya et la Cappadoce. Scannez le QR code reçu par e-mail et surfez dès l'atterrissage.",
+      "badges": ["Activation instantanée", "Istanbul et Antalya en 5G", "Parfait pour vacances et business"],
+      "faqs": [
+        { "q": "Faut-il enregistrer la eSIM à Istanbul ?", "a": "Non : installez-la depuis l'email reçu après votre paiement et elle s'active dès que vous allumez le mode données sur place, aéroport compris." },
+        { "q": "Est-ce que ça marche en Cappadoce ou sur la côte ?", "a": "Oui, la couverture est nationale : Istanbul, Antalya, la Cappadoce, Bodrum, Çanakkale et les grandes routes." },
+        { "q": "Je change souvent de ville, ça marche ?", "a": "Oui, la couverture est nationale : l'eSIM bascule automatiquement d'une ville à l'autre sans rien reconfigurer." }
+      ]
+    },
+    "esim-emirats-arabes-unis": {
+      "title": "eSIM Émirats arabes unis — Dubaï en 5G, activation instantanée",
+      "description": "Vacances à Dubaï ou rendez-vous business à Abu Dhabi : eSIM 5G activée en 2 minutes, votre numéro français reste joignable pour vos SMS bancaires. Couverture des sept émirats, prix TTC en euros.",
+      "badges": ["5G à Dubaï et Abu Dhabi", "Vacances et missions pro", "Numéro français conservé"],
+      "faqs": [
+        { "q": "La 5G est-elle disponible à Dubaï ?", "a": "Oui, la 5G est utilisable là où l'opérateur local la propose, notamment sur l'axe Dubaï–Abu Dhabi." },
+        { "q": "Puis-je garder mon numéro français actif ?", "a": "Oui : l'eSIM s'ajoute à votre SIM française. Vous gardez vos SMS de confirmation bancaire pendant vos achats à Dubaï." },
+        { "q": "Que couvre exactement l'eSIM ?", "a": "Les sept émirats : Dubaï, Abu Dhabi, Sharjah, Ajman, Ras el Khaïmah, Fujairah et Oumm al Qaïwaïn." }
+      ]
+    }
   }
 }

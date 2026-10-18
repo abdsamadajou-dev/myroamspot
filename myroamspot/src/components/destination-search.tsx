@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DESTINATION_SLUGS, DESTINATION_LABELS, DESTINATION_PHOTOS } from "../lib/destinations";
+import { DESTINATION_GRID_SLUGS, DESTINATION_LABELS, DESTINATION_PHOTOS } from "../lib/destinations";
 import { formatEur } from "../lib/format";
 import { getDictionary, t } from "../lib/i18n";
 import { getPackages } from "../lib/packages";
@@ -14,7 +14,7 @@ export function DestinationSearch() {
       aria-label="Destinations"
       className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
-      {DESTINATION_SLUGS.map((slug) => {
+      {DESTINATION_GRID_SLUGS.map((slug) => {
         const photo = DESTINATION_PHOTOS[slug];
         // Seed catalog keys omit the "esim-" prefix of the funnel slugs.
         const cheapest = getPackages(slug.slice("esim-".length))[0];
