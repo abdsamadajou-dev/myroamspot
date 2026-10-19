@@ -47,7 +47,7 @@ export default function PlanCard({ pack, networks = [], hotspot = false, speed, 
         </li>
       </ul>
       {(networks.length > 0 || speed) && (
-        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        <div className="mt-3 flex flex-wrap items-center gap-2">
           {speed && (
             <span className="rounded-full border border-border bg-white px-3 py-1 text-xs font-normal text-foreground/90">
               {speed}
@@ -59,7 +59,7 @@ export default function PlanCard({ pack, networks = [], hotspot = false, speed, 
               className="rounded-full border border-border bg-white px-3 py-1 text-xs font-normal text-foreground/90"
               data-testid="network-pill"
             >
-              {t(dict, "plan.networksLabel")} : {network}
+              {network}
             </span>
           ))}
           {hotspot && !soldOut && (
@@ -70,15 +70,15 @@ export default function PlanCard({ pack, networks = [], hotspot = false, speed, 
         </div>
       )}
       {!soldOut && (
-        <>
+        <div className="mt-auto pt-6">
           <button
             type="button"
-            className="mt-6 h-12 rounded-full bg-primary px-6 text-[15px] font-normal text-primary-foreground transition-[transform,background-color] hover:bg-[#0071e3] active:scale-[0.95]"
+            className="h-12 w-full rounded-full bg-primary px-6 text-[15px] font-normal text-primary-foreground transition-[transform,background-color] hover:bg-[#0071e3] active:scale-[0.95]"
           >
             {t(dict, "plan.buy")} • {formatEur(pack.priceCents)}
           </button>
           <p className="mt-2 text-center text-[12px] text-muted-foreground">{t(dict, "plan.reassurance")}</p>
-        </>
+        </div>
       )}
       {onCompatCheck && (
         <button

@@ -25,6 +25,7 @@ describe("PlanCard", () => {
     expect(cta.textContent?.replace(/\u00a0/g, " ")).toMatch(/^Commander • 12,99 €$/);
     expect(screen.getByText(/Livraison instantanée/)).toBeInTheDocument();
     expect(screen.getByText(/Sans engagement/)).toBeInTheDocument();
+    expect(screen.getByText(/Livraison instantanée/).textContent).not.toMatch(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u);
   });
   it("marks data as the prominent attribute, validity as secondary", () => {
     render(<PlanCard pack={pack} />);
@@ -36,7 +37,7 @@ describe("PlanCard", () => {
   it("renders network, speed and hotspot decision aids when provided", () => {
     render(<PlanCard pack={pack} networks={["Maroc Telecom", "Orange"]} hotspot speed="5G / 4G LTE" />);
     expect(screen.getAllByTestId("network-pill")).toHaveLength(2);
-    expect(screen.getByText(/Réseau : Maroc Telecom/)).toBeInTheDocument();
+    expect(screen.getByText(/Maroc Telecom/)).toBeInTheDocument();
     expect(screen.getByText("5G / 4G LTE")).toBeInTheDocument();
     expect(screen.getByText(/Partage : Oui/)).toBeInTheDocument();
   });
@@ -58,10 +59,11 @@ describe("PlanCard", () => {
   });
   it("shows the bestseller tag only on the highlighted plan", () => {
     render(<PlanCard pack={highlighted} />);
-    expect(screen.getByText(/Le Choix des Voyageurs/)).toBeInTheDocument();
+    expect(screen.getByText("Le plus choisi")).toBeInTheDocument();
+    expect(screen.getByText("Le plus choisi").textContent).not.toMatch(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u);
     cleanup();
     render(<PlanCard pack={pack} />);
-    expect(screen.queryByText(/Le Choix des Voyageurs/)).not.toBeInTheDocument();
+    expect(screen.queryByText("Le plus choisi")).not.toBeInTheDocument();
   });
   it("renders a placeholder and hides the CTA when price is zero", () => {
     render(<PlanCard pack={{ ...pack, priceCents: 0 }} />);
