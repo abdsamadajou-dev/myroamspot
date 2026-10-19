@@ -4,8 +4,9 @@ import path from "node:path";
 import { render, screen, cleanup } from "@testing-library/react";
 import { DESTINATION_SLUGS } from "../lib/destinations";
 import { buildFunnelMetadata, buildProductJsonLd } from "../lib/seo";
+import { getDictionary } from "../lib/i18n";
 import { getPackages } from "../lib/packages";
-import PlanCard from "../components/plan-card";
+import { PlansSection } from "../components/funnel/plans-section";
 
 afterEach(() => {
   cleanup();
@@ -32,7 +33,21 @@ describe("funnels", () => {
     expect((ld.offers as Record<string, string>).priceCurrency).toBe("EUR");
   });
   it("renders a plan card on a funnel page", () => {
-    render(<PlanCard pack={getPackages("suisse")[0]} />);
+    const dict = getDictionary("fr");
+    render(<PlansSection packs={getPackages("suisse")} funnelSlug="esim-suisse" />);
     expect(screen.getByText("8,99 €")).toBeInTheDocument();
+    expect(screen.getAllByTestId("network-pill").length).toBeGreaterThanOrEqual(2);
+    expect(screen.getAllByTestId("compat-trigger")).toHaveLength(2); // one per card
+  });
+  it("every funnel declares non-empty networks, a speed label, and a boolean hotspot", () => {
+    const dict = getDictionary("fr");
+    for (const slug of DESTINATION_SLUGS) {
+      const funnel = dict.funnels[slug as keyof typeof dict.funnels];
+      expect(Array.isArray(funnel.networks), `${slug} networks`).toBe(true);
+      expect(funnel.networks.length, `${slug} networks`).toBeGreaterThan(0);
+      expect(funnel.networks.every((n) => typeof n === "string" && n.length > 0), `${slug} network names`).toBe(true);
+      expect(typeof funnel.hotspot, `${slug} hotspot`).toBe("boolean");
+      expect(funnel.speed, `${slug} speed`).toMatch(/5G/);
+    }
   });
 });
