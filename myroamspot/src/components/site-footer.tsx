@@ -20,7 +20,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 py-14 sm:grid-cols-3 sm:px-6">
         <div>
           <p className="flex items-center gap-2 text-[17px] font-semibold tracking-[-0.02em] text-[#333333]">
-            <BrandMark className="h-6 w-6" />
+            <BrandMark className="h-7 w-7" />
             <BrandWordmark />
           </p>
           <p className="mt-1.5 text-sm text-muted-foreground">{t(dict, "site.tagline")}</p>

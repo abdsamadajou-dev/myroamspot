@@ -30,7 +30,7 @@ export function SiteHeader() {
             href="/"
             className="flex items-center gap-2.5"
           >
-            <BrandMark className="h-7 w-7" />
+            <BrandMark className="h-8 w-8" />
             <BrandWordmark className="text-[21px] font-bold tracking-[-0.02em] text-foreground" />
           </Link>
           <Link

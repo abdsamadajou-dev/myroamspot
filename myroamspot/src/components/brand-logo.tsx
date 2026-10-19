@@ -6,7 +6,7 @@
 // grotesque) so it stays selectable, translatable and font-consistent.
 export function BrandMark({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className={className}>
+    <svg viewBox="12 13 44 43" aria-hidden="true" className={className}>
       {/* SIM body with chamfered top-right corner */}
       <path d="M14 24a6 6 0 0 1 6-6h14l16 16v16a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z" fill="#1d1d1f" />
       {/* SIM contacts */}
