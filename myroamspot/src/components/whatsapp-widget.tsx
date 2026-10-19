@@ -5,16 +5,18 @@ export function WhatsAppWidget() {
   if (!WHATSAPP_NUMBER) return null;
   const dict = getDictionary("fr");
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t(dict, "support.whatsappMessage"))}`;
-// {button-icon-circular} (DESIGN.md): 44px translucent gray chip floating
-// over content, icon in ink, system-wide press state. The WhatsApp green is
-// the vendor's asset inside the SVG, not a UI accent.
+// Floating {button-icon-circular} (DESIGN.md): 44px white capsule with
+// hairline ring so it lifts off any surface, and the WhatsApp glyph in the
+// vendor's own green — the green is a third-party trust signal users hunt
+// for on arrival pages, not a UI accent; our chrome stays accent-free.
+// Press state is the system-wide scale(0.95).
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t(dict, "support.whatsappCta")}
-      className="fixed bottom-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-[rgba(210,210,215,0.64)] text-[#1d1d1f] shadow-none backdrop-blur-sm transition-transform hover:bg-[rgba(210,210,215,0.85)] active:scale-[0.95]"
+      className="fixed bottom-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-[#25d366] transition-colors hover:border-[#1d1d1f]/30 active:scale-[0.95]"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.05-.52-.099-.148-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
