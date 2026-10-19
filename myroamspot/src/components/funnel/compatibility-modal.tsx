@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import { getDictionary, t } from "../../lib/i18n";
 
-// Airalo moves compatibility checks to AFTER purchase; ours is pre-purchase —
-// an informational modal (never a fake diagnostic) with the EID dial-code
-// trick and the carrier-lock warning before any money changes hands.
+// Apple sheet grammar (DESIGN.md): white panel, 18px radius, hairline border,
+// no shadow — separation comes from the dimmed backdrop. Bullets are the one
+// Action Blue moment; the carrier-lock note sits on parchment.
 export function CompatibilityModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const dict = getDictionary("fr");
 
@@ -34,28 +34,28 @@ export function CompatibilityModal({ open, onClose }: { open: boolean; onClose: 
         aria-labelledby="compat-title"
         data-testid="compat-dialog"
         onClick={(event) => event.stopPropagation()}
-        className="w-full max-w-md rounded-xl bg-white p-6 shadow-airbnb"
+        className="w-full max-w-md rounded-lg border border-border bg-white p-6"
       >
-        <h2 id="compat-title" className="text-[21px] font-semibold text-foreground">
+        <h2 id="compat-title" className="text-[21px] font-semibold tracking-[-0.02em] text-foreground">
           {t(dict, "plan.compatTitle")}
         </h2>
-        <p className="mt-1.5 text-sm text-muted-foreground">{t(dict, "plan.compatIntro")}</p>
-        <ul className="mt-4 space-y-3 text-sm text-foreground">
+        <p className="mt-1.5 text-[15px] text-muted-foreground">{t(dict, "plan.compatIntro")}</p>
+        <ul className="mt-4 space-y-3 text-[15px] text-foreground">
           {steps.map((step) => (
             <li key={step} className="flex gap-2.5">
-              <span aria-hidden="true" className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+              <span aria-hidden="true" className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
               {step}
             </li>
           ))}
         </ul>
-        <p className="mt-4 rounded-lg bg-secondary px-4 py-3 text-xs text-foreground">
+        <p className="mt-4 rounded-md bg-secondary px-4 py-3 text-[13px] text-foreground">
           {t(dict, "plan.compatCarrierLock")}
         </p>
         <button
           type="button"
           onClick={onClose}
           data-testid="compat-close"
-          className="mt-5 h-11 w-full rounded-md bg-secondary px-6 text-sm font-medium text-foreground transition-colors hover:bg-border"
+          className="mt-5 h-11 w-full rounded-full bg-secondary px-6 text-[15px] font-normal text-foreground transition-[transform,background-color] hover:bg-border active:scale-[0.95]"
         >
           {t(dict, "plan.compatClose")}
         </button>

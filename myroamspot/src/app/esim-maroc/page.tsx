@@ -19,7 +19,7 @@ export default function MarocPage() {
       <FunnelHero slug={slug} />
       <TrustBadges />
       <section aria-labelledby="plans-title" className="mx-auto max-w-5xl px-4 py-10">
-        <h2 id="plans-title" className="mb-6 text-center text-[21px] font-bold">
+        <h2 id="plans-title" className="mb-8 text-center text-[24px] font-semibold tracking-[-0.02em] sm:text-[28px]">
           {t(dict, "ui.plansHeading")}
         </h2>
         <PlansSection packs={packs} funnelSlug={slug} />

@@ -30,7 +30,7 @@ describe("PlanCard", () => {
     render(<PlanCard pack={pack} />);
     const data = screen.getByText(/5\s*Go/);
     const validity = screen.getByText(/10\s*jours/);
-    expect(data.className).toMatch(/font-bold/);
+    expect(data.className).toMatch(/font-semibold/);
     expect(validity.className).toMatch(/muted/);
   });
   it("renders network, speed and hotspot decision aids when provided", () => {

@@ -4,8 +4,10 @@ import { formatEur } from "../lib/format";
 import { getDictionary, t } from "../lib/i18n";
 import { getPackages } from "../lib/packages";
 
-// Airalo-style popular-locations rows: flag square + country + "dès X €" on
-// white pills, all inside the green panel rendered by the hub page.
+// Apple store-utility-card rows (DESIGN.md): white pills on the parchment
+// band, 1px hairline border, 18px radius, no shadow. Flag at {rounded.sm},
+// product name in body-strong (17px/600), price anchored right. All inside
+// the parchment band rendered by the hub page.
 export function DestinationSearch() {
   const dict = getDictionary("fr");
   return (
@@ -21,7 +23,7 @@ export function DestinationSearch() {
             key={slug}
             href={`/${slug}`}
             aria-label={DESTINATION_LABELS[slug]}
-            className="flex h-[72px] items-center justify-between gap-4 rounded-xl bg-white px-4 transition-shadow hover:shadow-airbnb sm:px-5"
+            className="flex items-center justify-between gap-4 rounded-lg border border-border bg-white py-3.5 pl-4 pr-5 transition-colors hover:border-[#1d1d1f]/30 sm:pl-5"
           >
             <span className="flex min-w-0 items-center gap-4">
               <img
@@ -29,18 +31,18 @@ export function DestinationSearch() {
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
-                width={32}
-                height={32}
-                className="h-8 w-8 shrink-0 rounded-md object-cover"
+                width={24}
+                height={24}
+                className="h-6 w-6 shrink-0 rounded-sm object-cover"
               />
-              <span className="truncate text-base font-semibold text-foreground">
+              <span className="truncate text-[17px] font-semibold tracking-[-0.02em] text-foreground">
                 {DESTINATION_LABELS[slug]}
               </span>
             </span>
             {cheapest && (
-              <span className="whitespace-nowrap text-sm text-muted-foreground">
+              <span className="whitespace-nowrap text-[13px] text-muted-foreground">
                 {t(dict, "plan.from")}{" "}
-                <span className="text-base font-bold text-foreground">{formatEur(cheapest.priceCents)}</span>
+                <span className="text-[17px] font-semibold text-foreground">{formatEur(cheapest.priceCents)}</span>
               </span>
             )}
           </Link>
