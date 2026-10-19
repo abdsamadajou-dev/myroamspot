@@ -16,7 +16,7 @@ describe("layout", () => {
   it("renders the brand in the header", async () => {
     const { SiteHeader } = await import("../components/site-header");
     render(<SiteHeader />);
-    expect(screen.getByText("MyRoamSpot")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /My\s*Roam\s*Spot/ })).toBeInTheDocument();
   });
 
   it("links to WhatsApp with a prefilled message when configured", async () => {

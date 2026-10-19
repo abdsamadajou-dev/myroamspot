@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Plane } from "lucide-react";
 import { getDictionary, t } from "../lib/i18n";
-import { BRAND } from "../lib/site";
+import { BrandMark, BrandWordmark } from "./brand-logo";
 import { NavTabs } from "./nav-tabs";
 
 // Apple two-row nav (DESIGN.md): thin black {global-nav} (44px) with the
@@ -29,15 +28,10 @@ export function SiteHeader() {
         <div className="mx-auto flex h-13 max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link
             href="/"
-            className="flex items-center gap-2 text-[21px] font-semibold tracking-[-0.02em] text-foreground"
+            className="flex items-center gap-2.5"
           >
-            <span
-              aria-hidden="true"
-              className="flex h-7 w-7 items-center justify-center rounded-sm bg-[#1d1d1f] text-white"
-            >
-              <Plane className="h-4 w-4" strokeWidth={2} />
-            </span>
-            {BRAND}
+            <BrandMark className="h-7 w-7" />
+            <BrandWordmark className="text-[21px] font-bold tracking-[-0.02em] text-foreground" />
           </Link>
           <Link
             href="/#destinations"

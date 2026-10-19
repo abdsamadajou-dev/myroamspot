@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Plane } from "lucide-react";
-import { BRAND } from "../lib/site";
 import { getDictionary, t } from "../lib/i18n";
+import { BrandMark, BrandWordmark } from "./brand-logo";
 
 // Legal routes must exist as static pages — see src/app/{mentions-legales,cgv,politique-de-confidentialite}/
 const legalLinks = [
@@ -21,13 +20,8 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-4 py-14 sm:grid-cols-3 sm:px-6">
         <div>
           <p className="flex items-center gap-2 text-[17px] font-semibold tracking-[-0.02em] text-[#333333]">
-            <span
-              aria-hidden="true"
-              className="flex h-7 w-7 items-center justify-center rounded-sm bg-[#1d1d1f] text-white"
-            >
-              <Plane className="h-4 w-4" strokeWidth={2} />
-            </span>
-            {BRAND}
+            <BrandMark className="h-6 w-6" />
+            <BrandWordmark />
           </p>
           <p className="mt-1.5 text-sm text-muted-foreground">{t(dict, "site.tagline")}</p>
         </div>
