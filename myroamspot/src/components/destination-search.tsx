@@ -1,21 +1,19 @@
 import Link from "next/link";
-import { DESTINATION_GRID_SLUGS, DESTINATION_LABELS, DESTINATION_PHOTOS } from "../lib/destinations";
+import { DESTINATION_GRID_SLUGS, DESTINATION_FLAGS, DESTINATION_LABELS } from "../lib/destinations";
 import { formatEur } from "../lib/format";
 import { getDictionary, t } from "../lib/i18n";
 import { getPackages } from "../lib/packages";
 
-// Airbnb-style property cards: 1:1 photo plate with {rounded.md} clipping and
-// the hover float (the system's only shadow tier), then a sparse meta block —
-// title, muted product line, price right-aligned in ink.
+// Airalo-style popular-locations rows: flag square + country + "dès X €" on
+// white pills, all inside the green panel rendered by the hub page.
 export function DestinationSearch() {
   const dict = getDictionary("fr");
   return (
     <nav
       aria-label="Destinations"
-      className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      className="flex flex-col gap-3"
     >
       {DESTINATION_GRID_SLUGS.map((slug) => {
-        const photo = DESTINATION_PHOTOS[slug];
         // Seed catalog keys omit the "esim-" prefix of the funnel slugs.
         const cheapest = getPackages(slug.slice("esim-".length))[0];
         return (
@@ -23,36 +21,28 @@ export function DestinationSearch() {
             key={slug}
             href={`/${slug}`}
             aria-label={DESTINATION_LABELS[slug]}
-            className="group block text-left"
+            className="flex h-[72px] items-center justify-between gap-4 rounded-xl bg-white px-4 transition-shadow hover:shadow-airbnb sm:px-5"
           >
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-secondary">
+            <span className="flex min-w-0 items-center gap-4">
               <img
-                src={photo.src}
-                alt={photo.alt}
+                src={DESTINATION_FLAGS[slug]}
+                alt=""
+                aria-hidden="true"
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]"
+                width={32}
+                height={32}
+                className="h-8 w-8 shrink-0 rounded-md object-cover"
               />
-            </div>
-            <div className="mt-2.5 flex items-start justify-between gap-3">
-              <div className="min-w-0">
-                <h3 className="text-base font-semibold text-foreground">
-                  {DESTINATION_LABELS[slug]}
-                </h3>
-                <p className="mt-0.5 truncate text-sm text-muted-foreground">
-                  {t(dict, "home.cardMeta")}
-                </p>
-              </div>
-              {cheapest && (
-                <p className="whitespace-nowrap text-sm text-foreground">
-                  <span className="font-semibold">{t(dict, "plan.from")}</span>{" "}
-                  <span className="font-semibold">{formatEur(cheapest.priceCents)}</span>
-                  <span className="text-muted-foreground">
-                    {" "}
-                    · {t(dict, "plan.ttc")}
-                  </span>
-                </p>
-              )}
-            </div>
+              <span className="truncate text-base font-semibold text-foreground">
+                {DESTINATION_LABELS[slug]}
+              </span>
+            </span>
+            {cheapest && (
+              <span className="whitespace-nowrap text-sm text-muted-foreground">
+                {t(dict, "plan.from")}{" "}
+                <span className="text-base font-bold text-foreground">{formatEur(cheapest.priceCents)}</span>
+              </span>
+            )}
           </Link>
         );
       })}

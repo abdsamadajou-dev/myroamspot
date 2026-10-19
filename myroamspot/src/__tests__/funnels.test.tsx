@@ -15,7 +15,7 @@ afterEach(() => {
 describe("funnels", () => {
   it("every destination maps to a real funnel slug", () => {
     expect(DESTINATION_SLUGS).toContain("esim-omra");
-    expect(DESTINATION_SLUGS).toHaveLength(6);
+    expect(DESTINATION_SLUGS).toHaveLength(12);
   });
   it("has no dynamic esim slug route (prevents junk SEO URLs)", () => {
     const dynamicDir = path.join(process.cwd(), "src/app/esim-[city]");

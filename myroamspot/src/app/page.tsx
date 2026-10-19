@@ -37,8 +37,17 @@ export default function Home() {
         </a>
 
         <div id="destinations" className="mt-10 scroll-mt-24">
-          <h2 className="sr-only">{t(dict, "nav.destinations")}</h2>
-          <DestinationSearch />
+          <div className="rounded-3xl bg-[#3f9b6f] p-6 sm:p-8">
+            <h2 className="text-[26px] font-bold leading-tight text-foreground sm:text-[28px]">
+              {t(dict, "home.popularHeading")}
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-black/70">
+              {t(dict, "home.popularSubtitle")}
+            </p>
+            <div className="mt-6">
+              <DestinationSearch />
+            </div>
+          </div>
         </div>
       </section>
 

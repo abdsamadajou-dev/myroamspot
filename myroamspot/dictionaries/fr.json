@@ -8,6 +8,8 @@
     "searchPlaceholder": "Où voyagez-vous ?",
     "searchCta": "Trouver mon eSIM",
     "cardMeta": "eSIM · 4G/5G · activation immédiate",
+    "popularHeading": "eSIM pour les destinations populaires",
+    "popularSubtitle": "Explorez nos eSIMs les plus demandées — forfaits à partir du prix affiché.",
     "stepsHeading": "Comment ça marche",
     "steps": [
       { "title": "Choisissez votre destination", "description": "En quelques clics, sans engagement." },
@@ -145,6 +147,84 @@
         { "q": "La 5G est-elle disponible à Dubaï ?", "a": "Oui, la 5G est utilisable là où l'opérateur local la propose, notamment sur l'axe Dubaï–Abu Dhabi." },
         { "q": "Puis-je garder mon numéro français actif ?", "a": "Oui : l'eSIM s'ajoute à votre SIM française. Vous gardez vos SMS de confirmation bancaire pendant vos achats à Dubaï." },
         { "q": "Que couvre exactement l'eSIM ?", "a": "Les sept émirats : Dubaï, Abu Dhabi, Sharjah, Ajman, Ras el Khaïmah, Fujairah et Oumm al Qaïwaïn." }
+      ]
+    },
+    "esim-thailande": {
+      "title": "eSIM Thaïlande — Bangkok et les îles connectées instantanément",
+      "description": "Vacances en Thaïlande : eSIM active en 2 minutes, couverture nationale à Bangkok, Phuket et Chiang Mai. Scannez le QR code reçu par e-mail et surfez dès l'atterrissage.",
+      "badges": ["Activation instantanée", "Bangkok, Phuket et les îles en 5G", "Parfait pour vacances et hôtel"],
+      "networks": ["AIS", "DTAC", "TrueMove"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "Faut-il enregistrer la eSIM avant le départ ?", "a": "Non : installez-la depuis l'email reçu après votre paiement ; elle s'active dès que vous allumez le mode données en Thaïlande, aéroport compris." },
+        { "q": "Est-ce que ça marche sur les îles ?", "a": "Oui, la couverture est nationale : Bangkok, Phuket, Koh Samui, Krabi et Chiang Mai sur les réseaux AIS, DTAC et TrueMove." },
+        { "q": "Puis-je garder mon numéro français ?", "a": "Oui : l'eSIM s'ajoute à votre SIM française, votre numéro reste joignable pour vos SMS et appels." }
+      ]
+    },
+    "esim-etats-unis": {
+      "title": "eSIM États-Unis — New York, Miami et Los Angeles en 5G",
+      "description": "City-trip ou road-trip aux États-Unis : eSIM 5G activée en 2 minutes, votre numéro français reste joignable. Forfait en euros TTC, zéro hors-forfait à l'arrivée.",
+      "badges": ["5G à New York, Miami et Los Angeles", "Idéale city-trip et road-trip", "Prix en euros TTC"],
+      "networks": ["T-Mobile", "AT&T"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "Combien de Go pour un road-trip de deux semaines ?", "a": "10 Go couvrent GPS, WhatsApp et quelques vidéos. Les grands consommateurs choisiront plus de data ou un deuxième forfait complémentaire." },
+        { "q": "Est-ce que ça marche aussi au Canada ou au Mexique ?", "a": "La couverture incluse est limitée aux États-Unis. Pour un itinéraire multi-pays, contactez-nous sur WhatsApp : nous vous orientons vers la bonne formule." },
+        { "q": "Puis-je payer en euros ?", "a": "Oui, tous nos forfaits sont affichés et payés en euros TTC, sans frais surprise en dollars." }
+      ]
+    },
+    "esim-espagne": {
+      "title": "eSIM Espagne — Barcelone, Madrid et les côtes sans roaming",
+      "description": "Vacances ou week-end en Espagne : eSIM active en 2 minutes sur les réseaux Movistar, Orange ES et Vodafone. Prix fixe en euros TTC, de la Catalogne à l'Andalousie.",
+      "badges": ["Movistar, Orange ES & Vodafone", "Barcelone et Madrid en 5G", "Prix fixe en euros"],
+      "networks": ["Movistar", "Orange ES", "Vodafone ES"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "L'Espagne étant dans l'UE, mon forfait français ne suffit-il pas ?", "a": "Souvent oui, mais beaucoup de forfaits plafonnent le data en roaming UE. L'eSIM espagnole garantit un forfait local complet, sans plafond surprise." },
+        { "q": "Quand le forfait démarre-t-il ?", "a": "À l'activation de l'eSIM. Installez-la la veille du départ : vous êtes connecté en arrivant à Barcelone." },
+        { "q": "Puis-je partager ma connexion ?", "a": "Oui, le partage de connexion (hotspot) fonctionne normalement." }
+      ]
+    },
+    "esim-italie": {
+      "title": "eSIM Italie — Rome, Venise et la côte amalfitaine en 5G",
+      "description": "City-trip à Rome ou vacances en Toscane : eSIM italienne active en 2 minutes sur les réseaux TIM, Vodafone IT et WindTre. Forfait en euros TTC, sans frais de roaming.",
+      "badges": ["TIM, Vodafone IT & WindTre", "Rome et Venise en 5G", "Prix fixe en euros"],
+      "networks": ["TIM", "Vodafone IT", "WindTre"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "Mon forfait français ne couvre-t-il pas l'Italie ?", "a": "L'Italie est en UE, mais certains forfaits plafonnent le data en roaming. L'eSIM italienne offre un forfait local complet, sans plafond caché." },
+        { "q": "Quand le forfait démarre-t-il ?", "a": "À l'activation de l'eSIM : installez-la avant le départ, elle se connecte au réseau italien dès votre arrivée." },
+        { "q": "Puis-je joindre mon numéro français ?", "a": "Oui : l'eSIM s'ajoute à votre SIM habituelle, vos appels et SMS continuent d'arriver." }
+      ]
+    },
+    "esim-grece": {
+      "title": "eSIM Grèce — Athènes, Mykonos et Santorin connectées",
+      "description": "Vacances grecques : eSIM active en 2 minutes sur les réseaux Cosmote et Vodafone GR, y compris sur les îles. Prix fixe en euros TTC, zéro frais d'itinérance.",
+      "badges": ["Cosmote & Vodafone GR", "Athènes et les Cyclades en 5G", "Prix fixe en euros"],
+      "networks": ["Cosmote", "Vodafone GR"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "Ça marche sur les îles grecques ?", "a": "Oui : Athènes, Mykonos, Santorin, Rhodes et Crète sont couvertes par les réseaux Cosmote et Vodafone GR." },
+        { "q": "La Grèce est dans l'UE, pourquoi une eSIM ?", "a": "Pour éviter les plafonds de data en roaming appliqués par certains forfaits français : l'eSIM grecque fournit un forfait local complet." },
+        { "q": "Puis-je partager ma connexion ?", "a": "Oui, le partage de connexion (hotspot) fonctionne normalement." }
+      ]
+    },
+    "esim-portugal": {
+      "title": "eSIM Portugal — Lisbonne et l'Algarve sans frais de roaming",
+      "description": "Week-end à Lisbonne ou vacances en Algarve : eSIM portugaise active en 2 minutes sur les réseaux MEO et NOS. Forfait fixe en euros TTC, support WhatsApp en français.",
+      "badges": ["MEO & NOS", "Lisbonne et Porto en 5G", "Prix fixe en euros"],
+      "networks": ["MEO", "NOS"],
+      "hotspot": true,
+      "speed": "5G / 4G LTE",
+      "faqs": [
+        { "q": "Le Portugal est dans l'UE, mon forfait ne suffit-il pas ?", "a": "Beaucoup de forfaits français plafonnent le data en roaming UE. L'eSIM portugaise garantit un forfait local complet, sans plafond surprise." },
+        { "q": "Quand le forfait démarre-t-il ?", "a": "À l'activation de l'eSIM. Installez-la la veille du départ : vous êtes connecté dès l'atterrissage à Lisbonne." },
+        { "q": "Puis-je garder mon numéro français ?", "a": "Oui : l'eSIM s'ajoute à votre SIM habituelle, votre numéro continue de recevoir appels et SMS." }
       ]
     }
   }

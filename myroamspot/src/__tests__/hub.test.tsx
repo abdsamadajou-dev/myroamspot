@@ -19,8 +19,8 @@ describe("destination search", () => {
     render(<DestinationSearch />);
     expect(screen.queryByRole("link", { name: DESTINATION_LABELS["esim-omra"] })).not.toBeInTheDocument();
   });
-  it("exposes exactly six destinations (grid + dedicated Omra funnel)", () => {
-    expect(DESTINATION_SLUGS).toHaveLength(6);
-    expect(DESTINATION_GRID_SLUGS).toHaveLength(5);
+  it("exposes exactly twelve destinations (grid + dedicated Omra funnel)", () => {
+    expect(DESTINATION_SLUGS).toHaveLength(12);
+    expect(DESTINATION_GRID_SLUGS).toHaveLength(11);
   });
 });

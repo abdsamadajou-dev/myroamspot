@@ -30,4 +30,18 @@ export const PACKAGES: Package[] = [
   // Émirats arabes unis
   { slug: "ae-7j-3go", destinationSlug: "emirats-arabes-unis", nameFr: "Émirats 7 jours", days: 7, dataGb: 3, priceCents: 999, active: true },
   { slug: "ae-14j-10go", destinationSlug: "emirats-arabes-unis", nameFr: "Émirats 14 jours", days: 14, dataGb: 10, priceCents: 1999, active: true, highlight: true },
+  // Europe populaire (Espagne, Italie, Grèce, Portugal)
+  { slug: "es-7j-3go", destinationSlug: "espagne", nameFr: "Espagne 7 jours", days: 7, dataGb: 3, priceCents: 499, active: true },
+  { slug: "es-15j-10go", destinationSlug: "espagne", nameFr: "Espagne 15 jours", days: 15, dataGb: 10, priceCents: 999, active: true, highlight: true },
+  { slug: "it-7j-3go", destinationSlug: "italie", nameFr: "Italie 7 jours", days: 7, dataGb: 3, priceCents: 499, active: true },
+  { slug: "it-15j-10go", destinationSlug: "italie", nameFr: "Italie 15 jours", days: 15, dataGb: 10, priceCents: 999, active: true, highlight: true },
+  { slug: "gr-7j-3go", destinationSlug: "grece", nameFr: "Grèce 7 jours", days: 7, dataGb: 3, priceCents: 499, active: true },
+  { slug: "gr-15j-10go", destinationSlug: "grece", nameFr: "Grèce 15 jours", days: 15, dataGb: 10, priceCents: 999, active: true, highlight: true },
+  { slug: "pt-7j-3go", destinationSlug: "portugal", nameFr: "Portugal 7 jours", days: 7, dataGb: 3, priceCents: 499, active: true },
+  { slug: "pt-15j-10go", destinationSlug: "portugal", nameFr: "Portugal 15 jours", days: 15, dataGb: 10, priceCents: 999, active: true, highlight: true },
+  // Long-haul populaire
+  { slug: "us-7j-3go", destinationSlug: "etats-unis", nameFr: "États-Unis 7 jours", days: 7, dataGb: 3, priceCents: 999, active: true },
+  { slug: "us-15j-10go", destinationSlug: "etats-unis", nameFr: "États-Unis 15 jours", days: 15, dataGb: 10, priceCents: 1999, active: true, highlight: true },
+  { slug: "th-7j-3go", destinationSlug: "thailande", nameFr: "Thaïlande 7 jours", days: 7, dataGb: 3, priceCents: 799, active: true },
+  { slug: "th-15j-10go", destinationSlug: "thailande", nameFr: "Thaïlande 15 jours", days: 15, dataGb: 10, priceCents: 1499, active: true, highlight: true },
 ];

@@ -24,6 +24,6 @@ describe("legal", () => {
     const urls = sitemap().map((u) => u.url);
     expect(urls).toContain("https://myroamspot.com/esim-omra");
     expect(urls).toContain("https://myroamspot.com/cgv");
-    expect(urls.filter((u) => u.includes("/esim-"))).toHaveLength(6);
+    expect(urls.filter((u) => u.includes("/esim-"))).toHaveLength(12);
   });
 });
